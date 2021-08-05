@@ -1,6 +1,7 @@
+<div align="center">
 <img src="Kinky.png" align="center">
 
-<div align="center">
+
 <div align="center">
 <h3> HELLO STALKERS 👋
 <hr>
