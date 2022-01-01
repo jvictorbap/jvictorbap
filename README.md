@@ -3,7 +3,7 @@
 
 
 <div align="center">
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&lines=Hello+Stalkers+%F0%9F%91%8B)](https://git.io/typing-svg)
+<h3> HELLO STALKERS 👋
 <hr>
 <h1>Bem vindos ao meu GitHub 💋
 <hr>
