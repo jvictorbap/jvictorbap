@@ -1,5 +1,5 @@
 <div align="center">
-<img src="Kinky.png" align="center">
+<img src="https://i.imgur.com/mdp7Zn7.png" align="center">
 
 
 <div align="center">
