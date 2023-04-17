@@ -48,4 +48,4 @@
 <img src="https://udi-s.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/2020/07/gif-gato-1519137077.gif" alt="program" style="max-width:100%;"> 
 </div>
   
-<a href="https://drive.google.com/file/d/1-IUWBSLOQhQbQwia0nFyXs7zpEE3oASz/view?usp=sharing">Confira meu curriculo aqui!<a/>
+<a href="[https://drive.google.com/file/d/1-IUWBSLOQhQbQwia0nFyXs7zpEE3oASz/view?usp=sharing](https://drive.google.com/file/d/1gsjc6BExYibkHzlJBLekWWUeAf5qUJ5a/view?usp=share_link)">Confira meu curriculo aqui!<a/>
