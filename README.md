@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://i.imgur.com/mdp7Zn7.png" align="center">
+<img src="https://i.imgur.com/ODc2y0v.jpeg" align="center">
 
 
 <div align="center">
@@ -42,7 +42,4 @@
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jvictorbap&theme=juicyfresh" alt="jvictorbap" />
   
-<img src="https://udi-s.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/2020/07/gif-gato-1519137077.gif" alt="program" style="max-width:100%;"> 
-</div>
-  
-<a href="https://drive.google.com/file/d/1gsjc6BExYibkHzlJBLekWWUeAf5qUJ5a/view?usp=share_link">Confira meu curriculo aqui!<a/>
+<a href="https://drive.google.com/file/d/1vzMRnTIzdh1KMB3gDdEFQfNHwaTCV050/view?usp=sharing">Confira meu curriculo aqui!<a/>
