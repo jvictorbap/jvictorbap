@@ -1,0 +1,116 @@
+name: 🏆 Generate Trophy SVG
+
+on:
+  schedule:
+    # Roda toda segunda-feira às 01:00 UTC
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  generate-trophy:
+    name: Fetch & Save Trophy SVG
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout branch output
+        uses: actions/checkout@v4
+        with:
+          ref: output
+          fetch-depth: 0
+
+      # Cria a branch output se ainda não existir
+      - name: 🌿 Ensure output branch exists
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 🏆 Download trophy SVG from API
+        run: |
+          npm install -g node-fetch@3 2>/dev/null || true
+
+          node - <<'EOF'
+          const https = require('https');
+          const fs = require('fs');
+
+          const url = 'https://github-profile-trophy.vercel.app/?username=jvictorbap&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=4';
+
+          https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (GitHub Actions)' } }, (res) => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => {
+              if (res.statusCode === 200 && data.trim().startsWith('<svg')) {
+                fs.writeFileSync('trophies.svg', data);
+                console.log('✅ SVG gerado com sucesso!');
+              } else {
+                // Fallback: SVG manual com as conquistas reais
+                const fallback = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="180" viewBox="0 0 900 180">
+          <rect width="900" height="180" rx="12" fill="#1a1b27"/>
+
+          <!-- Pull Shark x2 -->
+          <rect x="10" y="10" width="165" height="160" rx="10" fill="#1e2030" stroke="#5B4BFF" stroke-width="1.5"/>
+          <text x="92" y="45" text-anchor="middle" font-size="36">🦈</text>
+          <text x="92" y="80" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" fill="#a9b1d6">Pull Shark</text>
+          <rect x="70" y="90" width="44" height="22" rx="11" fill="#1E90FF"/>
+          <text x="92" y="106" text-anchor="middle" font-family="Segoe UI,Arial" font-size="12" fill="white" font-weight="bold">x 2</text>
+          <text x="92" y="150" text-anchor="middle" font-family="Segoe UI,Arial" font-size="10" fill="#565f89">Achieved</text>
+
+          <!-- YOLO -->
+          <rect x="185" y="10" width="165" height="160" rx="10" fill="#1e2030" stroke="#7B2FF7" stroke-width="1.5"/>
+          <text x="267" y="45" text-anchor="middle" font-size="36">🎲</text>
+          <text x="267" y="80" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" fill="#a9b1d6">YOLO</text>
+          <rect x="237" y="90" width="60" height="22" rx="11" fill="#7B2FF7"/>
+          <text x="267" y="106" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="white" font-weight="bold">ACHIEVED</text>
+          <text x="267" y="150" text-anchor="middle" font-family="Segoe UI,Arial" font-size="10" fill="#565f89">Achieved</text>
+
+          <!-- Quickdraw -->
+          <rect x="360" y="10" width="165" height="160" rx="10" fill="#1e2030" stroke="#5B4BFF" stroke-width="1.5"/>
+          <text x="442" y="45" text-anchor="middle" font-size="36">⚡</text>
+          <text x="442" y="80" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" fill="#a9b1d6">Quickdraw</text>
+          <rect x="412" y="90" width="60" height="22" rx="11" fill="#5B4BFF"/>
+          <text x="442" y="106" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="white" font-weight="bold">ACHIEVED</text>
+          <text x="442" y="150" text-anchor="middle" font-family="Segoe UI,Arial" font-size="10" fill="#565f89">Achieved</text>
+
+          <!-- Developer Program -->
+          <rect x="535" y="10" width="165" height="160" rx="10" fill="#1e2030" stroke="#00ADD8" stroke-width="1.5"/>
+          <text x="617" y="45" text-anchor="middle" font-size="36">🛠️</text>
+          <text x="617" y="72" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#a9b1d6">Developer</text>
+          <text x="617" y="88" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#a9b1d6">Program</text>
+          <rect x="587" y="98" width="60" height="22" rx="11" fill="#00ADD8"/>
+          <text x="617" y="114" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="white" font-weight="bold">MEMBER</text>
+          <text x="617" y="150" text-anchor="middle" font-family="Segoe UI,Arial" font-size="10" fill="#565f89">Member</text>
+
+          <!-- GitHub PRO -->
+          <rect x="710" y="10" width="165" height="160" rx="10" fill="#1e2030" stroke="#F7DF1E" stroke-width="1.5"/>
+          <text x="792" y="45" text-anchor="middle" font-size="36">⭐</text>
+          <text x="792" y="80" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" fill="#a9b1d6">GitHub PRO</text>
+          <rect x="762" y="90" width="60" height="22" rx="11" fill="#F7DF1E"/>
+          <text x="792" y="106" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#1a1b27" font-weight="bold">PRO</text>
+          <text x="792" y="150" text-anchor="middle" font-family="Segoe UI,Arial" font-size="10" fill="#565f89">Active</text>
+        </svg>`;
+                fs.writeFileSync('trophies.svg', fallback);
+                console.log('⚠️  API indisponível — SVG fallback gerado.');
+              }
+            });
+          }).on('error', (e) => {
+            console.error('Erro de rede:', e.message);
+            process.exit(1);
+          });
+          EOF
+
+      - name: 💾 Commit & push trophies.svg
+        run: |
+          git add trophies.svg
+          git diff --cached --quiet && echo "Sem mudanças." || (
+            git commit -m "chore: update trophies SVG [skip ci]"
+            git push origin output
+          )
