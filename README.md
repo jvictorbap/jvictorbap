@@ -133,10 +133,10 @@ const victor = {
 ## 🏆 Troféus & Conquistas
 
 <div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=jvictorbap&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=4" alt="GitHub Trophies" />
-
+<!-- SVG gerado pela GitHub Action trophy.yml — roda toda semana e salva na branch output -->
+<img src="https://raw.githubusercontent.com/jvictorbap/jvictorbap/output/trophies.svg" alt="GitHub Trophies" width="100%" />
 </div>
+<br/>
 
 <br/>
 
