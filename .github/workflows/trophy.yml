@@ -25,23 +25,35 @@ jobs:
             -H "User-Agent: Mozilla/5.0 (GitHub Actions)" \
             "https://github-profile-trophy.vercel.app/?username=jvictorbap&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=4")
 
-          # Verifica se retornou SVG válido
           if [ "$STATUS" = "200" ] && grep -q "<svg" trophies.svg; then
             echo "✅ Trophy SVG obtido da API (HTTP $STATUS)"
           else
-            echo "⚠️  API retornou $STATUS — gerando SVG fallback"
+            echo "⚠️  API retornou $STATUS — usando SVG fallback"
             cp .github/trophies-fallback.svg trophies.svg
           fi
 
-      - name: 🚀 Push trophies.svg para branch output
-        uses: crazy-max/ghaction-github-pages@v4
+          echo "--- Conteúdo gerado (primeiros 100 chars) ---"
+          head -c 100 trophies.svg
+
+      - name: 📥 Checkout branch output (preserva snake SVGs)
+        uses: actions/checkout@v4
         with:
-          target_branch: output
-          build_dir: .
-          keep_history: true
-          jekyll: false
-          commit_message: "chore: update trophies SVG [skip ci]"
-          include: |
-            trophies.svg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ref: output
+          path: output-branch
+
+      - name: 📋 Copiar trophies.svg para branch output
+        run: |
+          cp trophies.svg output-branch/trophies.svg
+          echo "✅ trophies.svg copiado"
+          ls -la output-branch/
+
+      - name: 💾 Commit & push apenas trophies.svg
+        run: |
+          cd output-branch
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add trophies.svg
+          git diff --cached --quiet \
+            && echo "Sem mudanças no SVG." \
+            || git commit -m "chore: update trophies SVG [skip ci]"
+          git push origin output
