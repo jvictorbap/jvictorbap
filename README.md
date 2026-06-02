@@ -36,8 +36,4 @@
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
 </div>
 
-![JVictorBap GitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=jvictorbap&theme=vision-friendly-dark)
-
 [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/jvictorbap/)
-
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jvictorbap&theme=juicyfresh" alt="jvictorbap" />
