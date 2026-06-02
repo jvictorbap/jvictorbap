@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117"/>
+      <stop offset="100%" style="stop-color:#1a1b27"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" rx="14" fill="url(#bg)"/>
+  <rect width="900" height="200" rx="14" fill="none" stroke="#5B4BFF" stroke-width="1" opacity="0.4"/>
+
+  <!-- ===== Pull Shark x2 ===== -->
+  <rect x="10" y="10" width="166" height="178" rx="10" fill="#161b22" stroke="#1E90FF" stroke-width="1.5"/>
+  <text x="93" y="62" text-anchor="middle" font-size="38" font-family="Segoe UI Emoji,Apple Color Emoji,sans-serif">&#x1F988;</text>
+  <text x="93" y="92" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#a9b1d6" font-weight="600">Pull Shark</text>
+  <rect x="63" y="100" width="60" height="22" rx="11" fill="#1E90FF"/>
+  <text x="93" y="116" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="white" font-weight="bold">x 2</text>
+  <text x="93" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#565f89">GitHub Achievement</text>
+
+  <!-- ===== YOLO ===== -->
+  <rect x="186" y="10" width="166" height="178" rx="10" fill="#161b22" stroke="#7B2FF7" stroke-width="1.5"/>
+  <text x="269" y="62" text-anchor="middle" font-size="38" font-family="Segoe UI Emoji,Apple Color Emoji,sans-serif">&#x1F3B2;</text>
+  <text x="269" y="92" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#a9b1d6" font-weight="600">YOLO</text>
+  <rect x="234" y="100" width="70" height="22" rx="11" fill="#7B2FF7"/>
+  <text x="269" y="116" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="white" font-weight="bold">ACHIEVED</text>
+  <text x="269" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#565f89">GitHub Achievement</text>
+
+  <!-- ===== Quickdraw ===== -->
+  <rect x="362" y="10" width="166" height="178" rx="10" fill="#161b22" stroke="#5B4BFF" stroke-width="1.5"/>
+  <text x="445" y="62" text-anchor="middle" font-size="38" font-family="Segoe UI Emoji,Apple Color Emoji,sans-serif">&#x26A1;</text>
+  <text x="445" y="92" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#a9b1d6" font-weight="600">Quickdraw</text>
+  <rect x="410" y="100" width="70" height="22" rx="11" fill="#5B4BFF"/>
+  <text x="445" y="116" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="white" font-weight="bold">ACHIEVED</text>
+  <text x="445" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#565f89">GitHub Achievement</text>
+
+  <!-- ===== Developer Program ===== -->
+  <rect x="538" y="10" width="166" height="178" rx="10" fill="#161b22" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="621" y="62" text-anchor="middle" font-size="34" font-family="Segoe UI Emoji,Apple Color Emoji,sans-serif">&#x1F6E0;</text>
+  <text x="621" y="88" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#a9b1d6" font-weight="600">Developer</text>
+  <text x="621" y="104" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#a9b1d6" font-weight="600">Program</text>
+  <rect x="586" y="112" width="70" height="22" rx="11" fill="#00ADD8"/>
+  <text x="621" y="128" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="white" font-weight="bold">MEMBER</text>
+  <text x="621" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#565f89">GitHub Highlight</text>
+
+  <!-- ===== GitHub PRO ===== -->
+  <rect x="714" y="10" width="166" height="178" rx="10" fill="#161b22" stroke="#F7DF1E" stroke-width="1.5"/>
+  <text x="797" y="62" text-anchor="middle" font-size="38" font-family="Segoe UI Emoji,Apple Color Emoji,sans-serif">&#x2B50;</text>
+  <text x="797" y="92" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#a9b1d6" font-weight="600">GitHub PRO</text>
+  <rect x="762" y="100" width="70" height="22" rx="11" fill="#F7DF1E"/>
+  <text x="797" y="116" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1a1b27" font-weight="bold">PRO</text>
+  <text x="797" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#565f89">GitHub Plan</text>
+</svg>
