@@ -167,8 +167,6 @@ const victor = {
 <!-- ====================== SNAKE ANIMATION ====================== -->
 ## 🐍 Contribuições
 
-> ⚠️ **Setup necessário:** Adicione o workflow `.github/workflows/snake.yml` (arquivo entregue junto) e aguarde a primeira execução da GitHub Action. A cobrinha aparecerá automaticamente após isso.
-
 <div align="center">
 
 <picture>
