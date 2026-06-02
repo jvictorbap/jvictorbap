@@ -197,12 +197,3 @@ const victor = {
 </div>
 
 <br/>
-
-<!-- ====================== FOOTER ====================== -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1E90FF,50:5B4BFF,100:7B2FF7&height=120&section=footer" />
-
-<div align="center">
-
-⭐️ De <a href="https://github.com/jvictorbap">Victor Santiago</a> — feito com 💜 e muito ☕
-
-</div>
